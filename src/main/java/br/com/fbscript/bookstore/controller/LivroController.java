@@ -39,13 +39,17 @@ public class LivroController {
 	
 	@RequestMapping("/adiciona")
 	public String adiciona(Livro livro){
-		dao.adiciona(livro);
-		return "livro/lista";
+		if(livro.getId()==null){
+			dao.adiciona(livro);
+		} else {
+			dao.altera(livro);
+		}
+		return "redirect:/livro/lista";
 	}	
 
 	@RequestMapping("/remove")
 	public String remove(Long id){		
 		dao.remove(dao.busca(id));
-		return "livro/lista";
+		return "redirect:/livro/lista";
 	}
 }

@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-<title>FB URL Shortener</title>
+<title>Book Store</title>
 <link type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"
 	rel="stylesheet" />

@@ -45,7 +45,7 @@
 				<input class="form-control" type="number" name="comboPreco" value="${livro.comboPreco}"/>
 			</div>
 		</div>		
-		<button type="submit" class="btn btn-default" value="Adicionar">Salvar</button>
+		<button type="submit" class="btn btn-default">Salvar</button>
 	</form>
 </div>
 <jsp:include page = "../footer.jsp" />
