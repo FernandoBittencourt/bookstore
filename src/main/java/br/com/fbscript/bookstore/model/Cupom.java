@@ -18,7 +18,13 @@ public class Cupom {
 	private Calendar validade;	
 	
 	private Double porcentagemDeDesconto;
-	
+
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public Calendar getValidade() {
 		return validade;
 	}
@@ -30,11 +36,5 @@ public class Cupom {
 	}
 	public void setPorcentagemDeDesconto(Double porcentagemDeDesconto) {
 		this.porcentagemDeDesconto = porcentagemDeDesconto;
-	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
 	}
 }
