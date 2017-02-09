@@ -14,5 +14,6 @@
 		<!-- Annotated entity classes -->
 		<mapping class="br.com.fbscript.bookstore.model.Livro"/>
 		<mapping class="br.com.fbscript.bookstore.model.Usuario"/>
+		<mapping class="br.com.fbscript.bookstore.model.Cupom"/>
 	</session-factory>
 </hibernate-configuration>
