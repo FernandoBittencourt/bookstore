@@ -8,10 +8,11 @@
 		<property name="hibernate.connection.password">ffdb51</property>
 		<!-- SQL dialect -->
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.hbm2ddl.auto">create-drop</property>
 		<!-- Print executed SQL to stdout -->
 		<property name="show_sql">true</property>
 		<!-- Annotated entity classes -->
 		<mapping class="br.com.fbscript.bookstore.model.Livro"/>
+		<mapping class="br.com.fbscript.bookstore.model.Usuario"/>
 	</session-factory>
 </hibernate-configuration>

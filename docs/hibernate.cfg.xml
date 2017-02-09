@@ -13,5 +13,6 @@
 		<property name="show_sql">true</property>
 		<!-- Annotated entity classes -->
 		<mapping class="br.com.fbscript.bookstore.model.Livro"/>
+		<mapping class="br.com.fbscript.bookstore.model.Usuario"/>
 	</session-factory>
 </hibernate-configuration>

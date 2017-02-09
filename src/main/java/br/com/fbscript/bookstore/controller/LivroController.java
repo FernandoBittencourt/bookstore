@@ -15,7 +15,7 @@ public class LivroController {
 	
 	@Autowired
 	public LivroController(LivroDao dao){
-		this.dao=dao;
+		this.dao = dao;
 	}
 
 	@RequestMapping("/lista")
@@ -26,7 +26,6 @@ public class LivroController {
 	
 	@RequestMapping("/novo")
 	public String novo(){
-		System.out.println("Executando a lógica com Spring MVC");
 		return "livro/formulario";
 	}
 
