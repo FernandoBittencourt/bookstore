@@ -18,7 +18,7 @@
 				<td>${item.id}</td>
 				<td>${item.nome}</td>
 				<td>${item.email}</td>
-				<td>${item.perfil}</td>
+				<td>${item.perfil.titulo}</td>
 				<td>				
 					<a href="<%=request.getContextPath()%>/usuario/altera?id=${item.id}" class="btn-warning btn-xs"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
 					<a href="<%=request.getContextPath()%>/usuario/remove?id=${item.id}"  class="btn-danger btn-xs"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>

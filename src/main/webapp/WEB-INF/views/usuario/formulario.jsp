@@ -24,7 +24,7 @@
 		<div class="row">
 			<div class="form-group">
 				<label class="control-label" for="perfil">Perfil</label> 
-				<select class="form-control" name="${usuario.perfil}" name="perfil">
+				<select class="form-control" name="perfil">
 					<c:forEach items="${perfis}" var="option">
 						<option value="${option}">
 							<c:out value="${option.titulo}"></c:out>
