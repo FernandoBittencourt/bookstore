@@ -1,5 +1,6 @@
 <jsp:include page = "../header.jsp" />
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <div class="container">
    	<div class="text-right">
@@ -8,6 +9,7 @@
 	<table class="table">
 	  	<tr>
 	    	<th>#</th>
+	    	<th>Usuário</th>
 	    	<th>Desconto (%)</th>
 	    	<th>Validade</th>
 	    	<th></th>
@@ -15,8 +17,9 @@
 		<c:forEach items="${cupons}" var="item">	
 	  		<tr>
 				<td>${item.id}</td>
+				<td>${item.usuario.nome}</td>
 				<td>${item.porcentagemDeDesconto}</td>
-				<td>${item.validade}</td>
+				<td><fmt:formatDate value="${item.validade.time}" type="date" pattern="dd/MM/yyyy" /></td>
 				<td>				
 					<a href="<%=request.getContextPath()%>/cupom/altera?id=${item.id}" class="btn-warning btn-xs"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
 					<a href="<%=request.getContextPath()%>/cupom/remove?id=${item.id}" class="btn-danger btn-xs"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>

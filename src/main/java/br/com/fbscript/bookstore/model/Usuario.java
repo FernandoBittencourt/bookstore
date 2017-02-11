@@ -1,11 +1,15 @@
 package br.com.fbscript.bookstore.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import br.com.fbscript.bookstore.model.enumerate.Perfil;
 
@@ -23,6 +27,9 @@ public class Usuario {
 	
 	@Enumerated(EnumType.STRING)
 	private Perfil perfil;
+	
+	@OneToMany(mappedBy = "usuario", targetEntity = Cupom.class)
+	private List<Cupom> cupons = new ArrayList<Cupom>();
 	
 	public Long getId() {
 		return id;
@@ -58,5 +65,13 @@ public class Usuario {
 	}
 	public void setPerfil(Perfil perfil) {
 		this.perfil = perfil;
+	}
+
+	public List<Cupom> getCupons() {
+		return cupons;
+	}
+
+	public void setCupons(List<Cupom> cupons) {
+		this.cupons = cupons;
 	}	
 }
