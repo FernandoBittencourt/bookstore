@@ -2,32 +2,19 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <div class="container">
-	<h2>Livros:</h2>
-   	<div class="text-right">
-		<a href="<%=request.getContextPath()%>/livro/novo" class="btn btn-primary">Novo</a>
-	</div>
-	<table class="table">
-	  	<tr>
-	    	<th>#</th>
-	    	<th>Titulo</th>
-	    	<th>Autor</th>
-	    	<th>Categoria</th>
-	    	<th>Descrição</th>
-	    	<th></th>
-	  	</tr>
-		<c:forEach items="${livros}" var="item">	
-	  		<tr>
-				<td>${item.id}</td>
-				<td>${item.titulo}</td>
-				<td>${item.autor}</td>
-				<td>${item.categoria}</td>
-				<td>${item.descricao}</td>
-				<td>				
-					<a href="<%=request.getContextPath()%>/livro/altera?id=${item.id}" class="btn-warning btn-xs"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
-					<a href="<%=request.getContextPath()%>/livro/remove?id=${item.id}"  class="btn-danger btn-xs"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-				</td>
-			</tr>
-		</c:forEach>
-	</table>
+	<h1>${livro.titulo}</h1>   	
+   	<h3>Código: #${livro.id}</h3>
+   	<h3>Categoria: ${livro.categoria}</h3>   	
+   	<h3>Autor: ${livro.autor}</h3>
+   	
+   	<img class="img-capa" src="${livro.capa}" alt="Capa do livro">	
+   	<h4>${livro.descricao}</h4>                
+   	
+   	<h3>Preços:</h3>
+   	<h4>Ebook: R$ ${livro.ebookPreco}</h4>   	
+   	<h4>Impresso: R$ ${livro.impressoPreco}</h4>
+   	<h4>Combo: R$ ${livro.comboPreco}</h4>
+	
+	<a href="#" class="btn btn-book" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Adicionar ao carrinho...</a>		
 </div>
 <jsp:include page = "../footer.jsp" />
