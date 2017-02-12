@@ -1,0 +1,45 @@
+.header-titulo {
+	background:#333;
+	color:white;
+	padding: 0px;
+}
+.header-titulo h1 {
+	font-size: 38px;
+}
+.dropdown-menu-titulo {
+	margin-top: 38px;
+	
+}
+.btn-menu-titulo {
+	background:#333;
+	color: white;
+}
+.pull-right>.dropdown-menu {
+	background:#f8965d;
+	color: #333;
+}
+
+.pull-right>.dropdown-menu a {
+	color: #333;
+}
+.pull-right>.dropdown-menu a:hover {
+	color: #333;
+}
+.open .glyphicon-font-menu {
+	background:#333;
+	color: #f8965d;
+}
+
+.btn-menu-titulo:hover {
+	background:#333;
+	color: #f8965d;
+}
+.glyphicon-font-menu {
+	margin-top: -18px;
+	font-size: 30px;
+	
+}
+
+.dropdown-item{
+	margin:5px;
+}

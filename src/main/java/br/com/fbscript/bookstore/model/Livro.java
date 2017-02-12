@@ -20,6 +20,8 @@ public class Livro {
 	private String autor;
 	
 	private String descricao;
+	
+	private String categoria;
 
 	private BigDecimal ebookPreco;
 	
@@ -89,5 +91,13 @@ public class Livro {
 	
 	public void setComboPreco(BigDecimal comboPreco) {
 		this.comboPreco = comboPreco;
+	}
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
 }

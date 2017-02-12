@@ -17,7 +17,7 @@
 		<div class="row">
 			<div class="form-group">
 				<label class="control-label" for="validade">Validade</label> 
-				<input type="text" class="form-control" name="validade" value="<fmt:formatDate value="${cupom.validade.time}" type="date" pattern="dd/MM/yyyy" />" />
+				<input type="text" class="form-control" placeholder="dd/mm/aaaa" name="validade" value="${cupom.validade}" />
 			</div>
 		</div>
 		<div class="row">

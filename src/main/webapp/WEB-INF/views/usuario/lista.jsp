@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <div class="container">
+	<h2>Usuários:</h2>
    	<div class="text-right">
 		<a href="<%=request.getContextPath()%>/usuario/novo" class="btn btn-primary">Novo</a>
 	</div>

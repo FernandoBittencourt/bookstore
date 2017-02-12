@@ -23,6 +23,12 @@
 		</div>
 		<div class="row">
 			<div class="form-group">
+    			 <label class="control-label" for="categoria">Categoria</label>
+				<input class="form-control" name="categoria" value="${livro.categoria}"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
     			 <label class="control-label" for="descricao">Descrição</label>
 				<textarea class="form-control" name="descricao" rows="5" cols="100">${livro.descricao}</textarea>
 			</div>

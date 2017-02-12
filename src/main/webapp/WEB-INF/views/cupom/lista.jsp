@@ -3,6 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <div class="container">
+	<h2>Cupons:</h2>
    	<div class="text-right">
 		<a href="<%=request.getContextPath()%>/cupom/novo" class="btn btn-primary">Novo</a>
 	</div>
