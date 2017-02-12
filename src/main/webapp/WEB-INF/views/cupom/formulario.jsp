@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="form-group">
 				<label class="control-label" for="porcentagemDeDesconto">Desconto (%)</label> 
-				<input type="number" class="form-control" name="porcentagemDeDesconto" value="${cupom.porcentagemDeDesconto}" />
+				<input type="number" step="0.01" class="form-control" name="porcentagemDeDesconto" value="${cupom.porcentagemDeDesconto}" />
 			</div>
 		</div>
 		<div class="row">

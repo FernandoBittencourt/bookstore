@@ -36,19 +36,19 @@
 		<div class="row">
 			<div class="form-group">
     			<label class="control-label" for="ebookPreco">Preço do Ebook</label>
-				<input class="form-control" type="number" name="ebookPreco" value="${livro.ebookPreco}"/>
+				<input class="form-control" type="number" step="0.01" name="ebookPreco" value="${livro.ebookPreco}"/>
 			</div>
 		</div>
 		<div class="row">
 			<div class="form-group">
     			<label class="control-label" for="impressoPreco">Preço do Impresso</label>
-				<input class="form-control" type="number" name="impressoPreco" value="${livro.impressoPreco}"/>
+				<input class="form-control" type="number" step="0.01" name="impressoPreco" value="${livro.impressoPreco}"/>
 			</div>
 		</div>
 		<div class="row">
 			<div class="form-group">
     			 <label class="control-label" for="comboPreco">Preço do Combo</label>
-				<input class="form-control" type="number" name="comboPreco" value="${livro.comboPreco}"/>
+				<input class="form-control" type="number" step="0.01" name="comboPreco" value="${livro.comboPreco}"/>
 			</div>
 		</div>		
 		<button type="submit" class="btn btn-default">Salvar</button>
