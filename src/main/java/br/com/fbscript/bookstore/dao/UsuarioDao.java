@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 import org.springframework.stereotype.Repository;
 
-import br.com.fbscript.bookstore.model.Livro;
 import br.com.fbscript.bookstore.model.Usuario;
 
 @Repository

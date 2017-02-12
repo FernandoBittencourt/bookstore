@@ -12,6 +12,8 @@
 <script src="<%=request.getContextPath()%>/resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="<%=request.getContextPath()%>/resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 </head>
 <body>
 	<div class="jumbotron header-titulo">
@@ -22,5 +24,9 @@
 			<div class="col-lg-6">
 				<h2><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/painel-de-admin"><span class="glyphicon glyphicon-list-alt"></span></a></h2>
 			</div>
+			<div>
+			<c:if test="${sessionScope.usuarioLogado == null}"><h5><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/entra">Entrar <span class="glyphicon glyphicon-arrow-right"></span></a></h5></c:if>	
+			<c:if test="${sessionScope.usuarioLogado != null}"><h5><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/sair">Sair <span class="glyphicon glyphicon-arrow-right"></span></a></h5></c:if>
+			</div>				
 		</div>
 	</div>
