@@ -1,3 +1,4 @@
+/* header */
 .header-titulo {
 	background:#333;
 	color:white;
@@ -10,24 +11,18 @@
 	margin-top: 38px;
 	
 }
+.logo-principal a {
+	color: white;
+	text-decoration: none;
+}
+
+.logo-principal a:hover {
+	color: white;	
+}
+
 .btn-menu-titulo {
 	background:#333;
 	color: white;
-}
-.pull-right>.dropdown-menu {
-	background:#f8965d;
-	color: #333;
-}
-
-.pull-right>.dropdown-menu a {
-	color: #333;
-}
-.pull-right>.dropdown-menu a:hover {
-	color: #333;
-}
-.open .glyphicon-font-menu {
-	background:#333;
-	color: #f8965d;
 }
 
 .btn-menu-titulo:hover {
@@ -37,9 +32,27 @@
 .glyphicon-font-menu {
 	margin-top: -18px;
 	font-size: 30px;
-	
 }
 
-.dropdown-item{
-	margin:5px;
+/* Footer */
+footer {
+    margin-top: 38px;
 }
+
+/* Principal */
+.dados-livro {
+	margin-left: 10px;
+}
+
+/* Admin-Menu */
+.admin-menu-item {
+	color: #333;
+	text-decoration: underline;
+}
+
+.admin-menu-item:hover {
+	color: #f8965d;
+	text-decoration: underline;
+}
+
+

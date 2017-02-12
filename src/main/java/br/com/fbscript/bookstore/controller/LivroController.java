@@ -35,6 +35,11 @@ public class LivroController {
 		return "livro/formulario";
 	}
 	
+	@RequestMapping("/vizualiza")
+	public String vizualizar(Long id, Model model){	
+		model.addAttribute("livro", dao.busca(id));
+		return "livro/dados";
+	}
 	
 	@RequestMapping("/adiciona")
 	public String adiciona(Livro livro){
