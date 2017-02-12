@@ -21,31 +21,39 @@ public class PrincipalController {
 		this.livroDao = livroDao;
 		this.usuarioDao = usuarioDao;
 	}
+
+	@RequestMapping("/")
+	public String index(Model model){
+		model.addAttribute("categorias", livroDao.listaCategorias());
+		model.addAttribute("livros", livroDao.lista());
+		return "principal/index";
+	}
 	
 	@RequestMapping("/entra")
 	public String entra(){
 		return "principal/formulario-login";
 	}
 	
+	@RequestMapping("/semPermissao")
+	public String semPermissao(){
+		return "principal/sem-permissao";
+	}
+	
 	@RequestMapping("/efetuaLogin")
-	public String efetuaLogin(Usuario usuario, HttpSession session){
+	public String efetuaLogin(Usuario usuario, HttpSession session, Model model){
 		usuario = usuarioDao.buscaPorNomeESenha(usuario.getNome(),usuario.getSenha());
 		if(usuario != null){
 			session.setAttribute("usuarioLogado", usuario);
-		}else {
-			return "redirect:principal/formulario-login";
 		}
-		return "redirect:principal/index";
+		model.addAttribute("categorias", livroDao.listaCategorias());
+		model.addAttribute("livros", livroDao.lista());
+		return "principal/index";
 	}
 	
 	@RequestMapping("/sair")
-	public String sair(HttpSession session){
-		session.removeAttribute("usuarioLogado");		
-		return "redirect:principal/index";
-	}
-	
-	@RequestMapping("/")
-	public String index(Model model){
+	public String sair(HttpSession session, Model model){
+		session.removeAttribute("usuarioLogado");
+
 		model.addAttribute("categorias", livroDao.listaCategorias());
 		model.addAttribute("livros", livroDao.lista());
 		return "principal/index";
