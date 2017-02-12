@@ -12,7 +12,6 @@
 	    	<th>Titulo</th>
 	    	<th>Autor</th>
 	    	<th>Categoria</th>
-	    	<th>Descrição</th>
 	    	<th></th>
 	  	</tr>
 		<c:forEach items="${livros}" var="item">	
@@ -21,7 +20,6 @@
 				<td>${item.titulo}</td>
 				<td>${item.autor}</td>
 				<td>${item.categoria}</td>
-				<td>${item.descricao}</td>
 				<td>				
 					<a href="<%=request.getContextPath()%>/livro/altera?id=${item.id}" class="btn-warning btn-xs"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
 					<a href="<%=request.getContextPath()%>/livro/remove?id=${item.id}"  class="btn-danger btn-xs"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>

@@ -52,6 +52,9 @@ footer {
 .principal-categoria{
 	color: #f8965d;
 }
+.thumbnail>img {
+	height: 300px;
+}
 
 /* Admin-Menu */
 .admin-menu-item {

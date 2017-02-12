@@ -25,7 +25,7 @@
 	                <h5 class="dados-livro">Ebook - R$ ${item.ebookPreco}</h5>                               
 	                <h5 class="dados-livro">Impresso - R$ ${item.impressoPreco}</h5>                               
 	                <h5 class="dados-livro">Combo - R$ ${item.comboPreco}</h5>
-	                <img src="${item.capa}" alt="Capa do livro">
+	                <img class="img-capa" src="${item.capa}" alt="Capa do livro">
 	                <a href="<%=request.getContextPath()%>/livro/visualiza?id=${item.id}" class="btn btn-book col-xs-12" role="button">Ver detalhes...</a>
 	                <div class="clearfix"></div>
 	            </div>
