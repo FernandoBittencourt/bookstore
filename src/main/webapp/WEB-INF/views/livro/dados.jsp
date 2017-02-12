@@ -7,7 +7,7 @@
    	<h3>Categoria: ${livro.categoria}</h3>   	
    	<h3>Autor: ${livro.autor}</h3>
    	
-   	<img class="img-capa" src="${livro.capa}" alt="Capa do livro">	
+   	<img class="img-capa img-responsive" src="${livro.capa}" alt="Capa do livro">	
    	<h4>${livro.descricao}</h4>                
    	
    	<h3>Preços:</h3>
