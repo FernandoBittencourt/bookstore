@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 import org.springframework.stereotype.Repository;
 
+import br.com.fbscript.bookstore.model.Livro;
 import br.com.fbscript.bookstore.model.Usuario;
 
 @Repository
@@ -37,6 +38,13 @@ public class UsuarioDao {
 		Usuario usuarioParaRemover = this.session.find(Usuario.class, usuario.getId());
 		this.session.remove(usuarioParaRemover);
 		this.session.getTransaction().commit();
+	}
+
+	public Usuario buscaPorNomeESenha(String nome, String senha) {
+		return this.session.createQuery("select u from Usuario u where u.nome = :nome and u.senha = :senha", Usuario.class)
+		.setParameter("nome", nome)
+		.setParameter("senha", senha)
+		.getSingleResult();
 	}
 
 }
