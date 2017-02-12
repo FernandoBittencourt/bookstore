@@ -23,7 +23,6 @@
 	</bean>
 	
 	<mvc:interceptors>
-	  <bean class=
-	    "br.com.fbscript.interceptor.AutorizadorInterceptor" />
+	  <bean class="br.com.fbscript.bookstore.interceptor.AutorizadorInterceptor" />
 	</mvc:interceptors>
 </beans>
