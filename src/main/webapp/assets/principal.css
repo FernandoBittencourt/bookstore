@@ -1,3 +1,9 @@
+/* Geral*/
+.btn-book{
+	color:white;
+	background:#f8965d;
+}
+
 /* header */
 .header-titulo {
 	background:#333;
@@ -42,6 +48,9 @@ footer {
 /* Principal */
 .dados-livro {
 	margin-left: 10px;
+}
+.principal-categoria{
+	color: #f8965d;
 }
 
 /* Admin-Menu */

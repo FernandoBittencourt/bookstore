@@ -18,6 +18,7 @@ public class PrincipalController {
 	
 	@RequestMapping("/")
 	public String index(Model model){
+		model.addAttribute("categorias", livroDao.listaCategorias());
 		model.addAttribute("livros", livroDao.lista());
 		return "principal/index";
 	}
@@ -26,4 +27,17 @@ public class PrincipalController {
 	public String painelAdmin(){
 		return "principal/admin-menu";
 	}
+	
+	@RequestMapping("/filtro")
+	public String filtro(String categoria, Model model){
+		model.addAttribute("categoriaSelecionada", categoria);
+		model.addAttribute("categorias", livroDao.listaCategorias());
+		if(categoria!=null && !categoria.isEmpty()){
+			model.addAttribute("livros", livroDao.buscaPorCategoria(categoria));
+		}else{
+			model.addAttribute("livros", livroDao.lista());
+		}
+		return "principal/index";
+	}
+	
 }

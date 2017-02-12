@@ -39,4 +39,14 @@ public class LivroDao {
 		this.session.getTransaction().commit();
 	}
 
+	public List<Livro> buscaPorCategoria(String titulo) {
+		return this.session.createQuery("select c from Livro c where c.categoria = :categoria", Livro.class)
+				.setParameter("categoria", titulo)
+				.getResultList();
+	}
+	
+	public List<String> listaCategorias() {
+		return this.session.createQuery("select distinct(c.categoria) from Livro c", String.class)
+				.getResultList();
+	}
 }
