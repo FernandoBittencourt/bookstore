@@ -20,13 +20,17 @@
 		<div class="container">
 			<div class="col-lg-6 logo-principal">
 				<h1><a href="<%=request.getContextPath()%>/"><span class="glyphicon glyphicon-book"></span> Book Store</a></h1>
+			</div>			
+			<div class="col-lg-2"></div>
+			<div class="col-lg-1">
+				<h2><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/carrinho"><span class="glyphicon glyphicon-shopping-cart"></span></a></h2>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-1">
 				<h2><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/painel-de-admin"><span class="glyphicon glyphicon-list-alt"></span></a></h2>
 			</div>
 			<div>
-			<c:if test="${sessionScope.usuarioLogado == null}"><h5><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/entra">Entrar <span class="glyphicon glyphicon-arrow-right"></span></a></h5></c:if>	
-			<c:if test="${sessionScope.usuarioLogado != null}"><h5><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/sair">Sair <span class="glyphicon glyphicon-arrow-right"></span></a></h5></c:if>
+			<c:if test="${sessionScope.usuarioLogado == null}"><h3><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/entra">Entrar <span class="glyphicon glyphicon-arrow-right"></span></a></h3></c:if>	
+			<c:if test="${sessionScope.usuarioLogado != null}"><h3><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/sair">Sair <span class="glyphicon glyphicon-arrow-right"></span></a></h3></c:if>
 			</div>				
 		</div>
 	</div>
