@@ -67,4 +67,13 @@ footer {
 	text-decoration: underline;
 }
 
+/* Carrinho */
+.remove-x {
+	color: black;
+	text-decoration: none;
+}
+.remove-x:hover {
+	color: #f8965d;
+	text-decoration: none;
+}
 

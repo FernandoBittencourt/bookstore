@@ -15,5 +15,7 @@
 		<mapping class="br.com.fbscript.bookstore.model.Livro"/>
 		<mapping class="br.com.fbscript.bookstore.model.Usuario"/>
 		<mapping class="br.com.fbscript.bookstore.model.Cupom"/>
+		<mapping class="br.com.fbscript.bookstore.model.Carrinho"/>
+		<mapping class="br.com.fbscript.bookstore.model.Produto"/>
 	</session-factory>
 </hibernate-configuration>

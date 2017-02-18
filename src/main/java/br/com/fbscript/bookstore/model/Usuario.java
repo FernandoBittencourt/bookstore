@@ -3,6 +3,7 @@ package br.com.fbscript.bookstore.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -10,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import br.com.fbscript.bookstore.model.enumerate.Perfil;
 
@@ -28,8 +30,11 @@ public class Usuario {
 	@Enumerated(EnumType.STRING)
 	private Perfil perfil;
 	
-	@OneToMany(mappedBy = "usuario", targetEntity = Cupom.class)
+	@OneToMany(mappedBy = "usuario", targetEntity = Cupom.class, cascade = CascadeType.REMOVE)
 	private List<Cupom> cupons = new ArrayList<Cupom>();
+	
+	@OneToOne(cascade = CascadeType.PERSIST)
+	private Carrinho carrinho = new Carrinho();
 	
 	public Long getId() {
 		return id;
@@ -73,5 +78,13 @@ public class Usuario {
 
 	public void setCupons(List<Cupom> cupons) {
 		this.cupons = cupons;
+	}
+
+	public Carrinho getCarrinho() {
+		return carrinho;
+	}
+
+	public void setCarrinho(Carrinho carrinho) {
+		this.carrinho = carrinho;
 	}	
 }

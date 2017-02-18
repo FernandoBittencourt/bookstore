@@ -23,7 +23,7 @@
 			</div>			
 			<div class="col-lg-2"></div>
 			<div class="col-lg-1">
-				<h2><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/carrinho"><span class="glyphicon glyphicon-shopping-cart"></span></a></h2>
+				<h2><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/carrinho/lista"><span class="glyphicon glyphicon-shopping-cart"></span></a></h2>
 			</div>
 			<div class="col-lg-1">
 				<h2><a class="btn-menu-titulo" href="<%=request.getContextPath()%>/painel-de-admin"><span class="glyphicon glyphicon-list-alt"></span></a></h2>

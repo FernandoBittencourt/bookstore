@@ -15,6 +15,6 @@
    	<h4>Impresso: R$ ${livro.impressoPreco}</h4>
    	<h4>Combo: R$ ${livro.comboPreco}</h4>
 	
-	<a href="#" class="btn btn-book" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Adicionar ao carrinho...</a>		
+	<a href="<%=request.getContextPath()%>/carrinho/adiciona?id=${livro.id}"  class="btn btn-book" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Adicionar ao carrinho...</a>		
 </div>
 <jsp:include page = "../footer.jsp" />
