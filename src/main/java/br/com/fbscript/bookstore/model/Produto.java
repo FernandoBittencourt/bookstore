@@ -33,7 +33,7 @@ public class Produto {
 		}else{
 			preco = livro.getEbookPreco();
 		}
-		preco = preco.multiply(BigDecimal.valueOf(quantidade));
+		preco = preco.multiply(BigDecimal.valueOf(quantidade)).setScale(2, BigDecimal.ROUND_DOWN);
 		return preco;
 	}
 	
